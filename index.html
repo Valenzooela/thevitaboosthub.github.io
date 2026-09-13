@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yanira Rios - The Vita Boost Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 420px;
+            width: 100%;
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 48px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 16px;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .company {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-top: 4px;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .info-section {
+            margin-bottom: 32px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #667eea;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            color: #667eea;
+            transform: translateX(4px);
+        }
+
+        .info-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .info-text {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .divider {
+            height: 1px;
+            background: #f0f0f0;
+            margin: 24px 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #f8f9ff;
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #667eea;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9ff;
+            font-size: 11px;
+            color: #999;
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="avatar">💚</div>
+            <div class="name">Yanira Rios</div>
+            <div class="title">Health Coach</div>
+            <div class="company">The Vita Boost Hub</div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Contact Info -->
+            <div class="info-section">
+                <div class="info-label">Contact</div>
+                
+                <a href="tel:909-459-9824" class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-text">909-459-9824</div>
+                </a>
+
+                <a href="mailto:thevitaboosthub@gmail.com" class="info-item">
+                    <div class="info-icon">✉️</div>
+                    <div class="info-text">thevitaboosthub@gmail.com</div>
+                </a>
+
+                <a href="https://thevitaboosthub.herbalife.com/en-us/u" target="_blank" class="info-item">
+                    <div class="info-icon">🌐</div>
+                    <div class="info-text">Visit Website</div>
+                </a>
+            </div>
+
+            <!-- Social -->
+            <div class="divider"></div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/thevitaboost_hub/" target="_blank" class="social-icon" title="Instagram">
+                    📷
+                </a>
+                <a href="mailto:thevitaboosthub@gmail.com" class="social-icon" title="Email">
+                    ✉️
+                </a>
+                <a href="tel:909-459-9824" class="social-icon" title="Call">
+                    📞
+                </a>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="cta-buttons">
+                <a href="https://www.instagram.com/thevitaboost_hub/" target="_blank" class="btn btn-secondary">
+                    Follow Us
+                </a>
+                <a href="https://thevitaboosthub.herbalife.com/en-us/u" target="_blank" class="btn btn-primary">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            The Vita Boost Hub | Herbalife Health & Wellness
+        </div>
+    </div>
+</body>
+</html>
