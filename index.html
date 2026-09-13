@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(160deg, #f5f0e1 0%, #eef1e4 45%, #16382a 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -22,13 +22,14 @@
         }
 
         .card-container {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: #fffdf7;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(15, 46, 33, 0.35);
             max-width: 420px;
             width: 100%;
             overflow: hidden;
             animation: slideUp 0.6s ease-out;
+            border: 1px solid rgba(201, 162, 39, 0.35);
         }
 
         @keyframes slideUp {
@@ -43,56 +44,113 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 40px 30px;
+            background: linear-gradient(135deg, #0f2e21 0%, #1c4d36 55%, #2f6b46 100%);
+            padding: 44px 30px 36px;
             text-align: center;
-            color: white;
+            color: #fdf8e8;
+            position: relative;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #c9a227, #f1d97a, #c9a227);
         }
 
         .avatar {
-            width: 100px;
-            height: 100px;
+            width: 96px;
+            height: 96px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
+            background: radial-gradient(circle at 30% 30%, #2f6b46, #143b28);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 48px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 18px;
+            font-size: 42px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
         }
 
         .name {
-            font-size: 28px;
+            font-size: 27px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
         }
 
         .title {
-            font-size: 16px;
+            font-size: 15px;
             opacity: 0.95;
             font-weight: 500;
             letter-spacing: 0.5px;
+            color: #f1d97a;
         }
 
         .company {
             font-size: 14px;
-            opacity: 0.85;
-            margin-top: 4px;
+            opacity: 0.9;
+            margin-top: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .tagline {
+            margin-top: 16px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #fdf8e8;
         }
 
         .content {
-            padding: 40px 30px;
+            padding: 34px 30px 8px;
+        }
+
+        .pillars {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px 28px;
+            gap: 8px;
+        }
+
+        .pillar {
+            flex: 1;
+            text-align: center;
+        }
+
+        .pillar-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 8px;
+            border-radius: 50%;
+            border: 1.5px solid #c9a227;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            background: #f8f3e1;
+        }
+
+        .pillar-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: #1c4d36;
         }
 
         .info-section {
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .info-label {
             font-size: 12px;
             text-transform: uppercase;
-            color: #667eea;
+            color: #a9842d;
             font-weight: 700;
             letter-spacing: 1px;
             margin-bottom: 12px;
@@ -103,12 +161,12 @@
             align-items: center;
             margin-bottom: 14px;
             text-decoration: none;
-            color: #333;
+            color: #22422f;
             transition: all 0.3s ease;
         }
 
         .info-item:hover {
-            color: #667eea;
+            color: #1c4d36;
             transform: translateX(4px);
         }
 
@@ -130,20 +188,20 @@
 
         .divider {
             height: 1px;
-            background: #f0f0f0;
+            background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.5), transparent);
             margin: 24px 0;
         }
 
         .cta-buttons {
             display: flex;
             gap: 12px;
-            margin-top: 28px;
+            margin-top: 4px;
         }
 
         .btn {
             flex: 1;
             padding: 12px 16px;
-            border: 2px solid #667eea;
+            border: 2px solid #1c4d36;
             border-radius: 8px;
             font-weight: 600;
             font-size: 13px;
@@ -158,23 +216,24 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #1c4d36 0%, #2f6b46 100%);
+            color: #fdf8e8;
             border-color: transparent;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 20px rgba(28, 77, 54, 0.4);
         }
 
         .btn-secondary {
-            background: white;
-            color: #667eea;
+            background: #fffdf7;
+            color: #a9842d;
+            border-color: #c9a227;
         }
 
         .btn-secondary:hover {
-            background: #f8f9ff;
+            background: #f8f3e1;
             transform: translateY(-2px);
         }
 
@@ -189,41 +248,47 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: #f0f0f0;
+            background: #f2ede0;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: #667eea;
+            color: #1c4d36;
             font-size: 18px;
             transition: all 0.3s ease;
+            border: 1px solid rgba(201, 162, 39, 0.4);
         }
 
         .social-icon:hover {
-            background: #667eea;
-            color: white;
+            background: #1c4d36;
+            color: #f1d97a;
             transform: scale(1.1);
         }
 
         .footer {
             text-align: center;
             padding: 20px;
-            background: #f8f9ff;
+            background: #f2ede0;
             font-size: 11px;
-            color: #999;
+            color: #6b6045;
+            letter-spacing: 0.3px;
         }
 
         @media (max-width: 480px) {
             .header {
-                padding: 30px 20px;
+                padding: 34px 20px 30px;
             }
 
             .content {
-                padding: 30px 20px;
+                padding: 28px 20px 8px;
+            }
+
+            .pillars {
+                padding: 0 16px 24px;
             }
 
             .name {
-                font-size: 24px;
+                font-size: 23px;
             }
 
             .cta-buttons {
@@ -234,22 +299,39 @@
 </head>
 <body>
     <div class="card-container">
-        <!-- Header -->
         <div class="header">
-            <div class="avatar">💚</div>
+            <div class="avatar">🌿</div>
             <div class="name">Yanira Rios</div>
             <div class="title">Health Coach</div>
             <div class="company">The Vita Boost Hub</div>
+            <div class="tagline">Better Health &middot; Better Life &middot; Together</div>
         </div>
 
-        <!-- Content -->
+        <div class="pillars">
+            <div class="pillar">
+                <div class="pillar-icon">🌱</div>
+                <div class="pillar-label">Nourish</div>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon">💪</div>
+                <div class="pillar-label">Strengthen</div>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon">🧘</div>
+                <div class="pillar-label">Balance</div>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon">❤️</div>
+                <div class="pillar-label">Thrive</div>
+            </div>
+        </div>
+
         <div class="content">
-            <!-- Contact Info -->
             <div class="info-section">
                 <div class="info-label">Contact</div>
-                
+
                 <a href="tel:909-459-9824" class="info-item">
-                    <div class="info-icon">📱</div>
+                    <div class="info-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
                     <div class="info-text">909-459-9824</div>
                 </a>
 
@@ -264,22 +346,20 @@
                 </a>
             </div>
 
-            <!-- Social -->
             <div class="divider"></div>
 
             <div class="social-links">
                 <a href="https://www.instagram.com/thevitaboost_hub/" target="_blank" class="social-icon" title="Instagram">
-                    📷
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
                 </a>
                 <a href="mailto:thevitaboosthub@gmail.com" class="social-icon" title="Email">
                     ✉️
                 </a>
                 <a href="tel:909-459-9824" class="social-icon" title="Call">
-                    📞
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </a>
             </div>
 
-            <!-- CTA Buttons -->
             <div class="cta-buttons">
                 <a href="https://www.instagram.com/thevitaboost_hub/" target="_blank" class="btn btn-secondary">
                     Follow Us
@@ -290,9 +370,8 @@
             </div>
         </div>
 
-        <!-- Footer -->
         <div class="footer">
-            The Vita Boost Hub | Herbalife Health & Wellness
+            The Vita Boost Hub | Herbalife Health &amp; Wellness
         </div>
     </div>
 </body>
